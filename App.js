@@ -30,7 +30,11 @@ export default function App() {
   }
 
   function handleDelet(item) {
-    console.log(item);
+    let filtroItem = list.filter((tarefa) => {
+      return tarefa.item !== item;
+    });
+
+    setList(filtroItem);
   }
 
   return (
